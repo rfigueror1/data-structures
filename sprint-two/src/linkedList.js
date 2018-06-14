@@ -34,8 +34,21 @@ var LinkedList = function() {
   };
 
   list.contains = function(target) {
+    var tempNode = list.head;
+    var result = false;
+    if(list.head === null){
+      return false;
+    }
+    else{
+      while(tempNode !== null || result !==false) {
+        if(tempNode.value === target){
+          return true;
+        }
+        tempNode = tempNode.next;
+      }
+    }
+    return result;
   };
-
   return list;
 };
 

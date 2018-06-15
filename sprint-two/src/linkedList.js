@@ -13,10 +13,10 @@ var LinkedList = function() {
     var newKeys = Object.keys(list);
     var tempIndex = newKeys.length;
     list.tempIndex = tempNode;
-    if(list.head === null) {
+    if (list.head === null) {
       list.head = tempNode;
       list.tail = tempNode;  
-    }else{
+    } else {
       list.tail.next = tempNode;
     }
     list.tail = tempNode;    
@@ -36,12 +36,12 @@ var LinkedList = function() {
   list.contains = function(target) {
     var tempNode = list.head;
     var result = false;
-    if(list.head === null){
+    if (list.head === null) {
       return false;
     }
-    else{
-      while(tempNode !== null || result !==false) {
-        if(tempNode.value === target){
+    else {
+      while (tempNode !== null || result !== false) {
+        if (tempNode.value === target) {
           return true;
         }
         tempNode = tempNode.next;

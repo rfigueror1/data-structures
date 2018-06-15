@@ -30,7 +30,7 @@ treeMethods.contains = function(target) {
   }
   var helperfunction = function(tree) { 
     var children1 = tree.children;
-    console.log('children 1', children1);
+    //console.log('children 1', children1);
     var len = children1.length;
     for (var i = 0; i<len; i++) {
       result.push(children1[i]);
@@ -39,7 +39,7 @@ treeMethods.contains = function(target) {
   };
   
   helperfunction(this);
-  console.log('result ', result);
+  //console.log('result ', result);
    
   for (var j = 0; j<result.length; j++) {
     if (result[j] !== undefined) {

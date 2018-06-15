@@ -81,8 +81,8 @@ define([
       it('removes the newest item, after newer items have already been added and removed', function() {
         stack.push('a');
         stack.push('b');
-        stack.push('c');
-        stack.pop();
+        //stack.push('c');
+        //stack.pop();
         expect(stack.pop()).to.equal('b');
       });
     });

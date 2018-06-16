@@ -75,10 +75,18 @@ binarytTreeMethods.contains = function(value) {
 }
 
 binarytTreeMethods.depthFirstLog = function(callback) {
-  
+  callback(this.value);
+  if(this.left !== null){
+    this.left.depthFirstLog(callback);
+  }
+  if(this.right !== null){
+    this.right.depthFirstLog(callback);
+  }
 }
 /*
- * Complexity: What is the time complexity of the above functions?
+ * Complexity: It depends if the tree is balanced (logarithmic) or unbalanced (linear). 
+ * In this case, we do not have a balancing method for the tree, so we cannot guarantee logarithmic
+ * time complexity.
  */
  
  

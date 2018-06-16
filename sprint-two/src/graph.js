@@ -5,7 +5,8 @@ var Graph = function() {
   this.list = {};
 };
 
-// Add a node to the graph, passing in the node's value.
+// Add a node to the graph, passing in the node's value
+// Time complexity is O(1)
 Graph.prototype.addNode = function(node) {
   // create an empty node
   this.list[node] = [];
@@ -13,10 +14,10 @@ Graph.prototype.addNode = function(node) {
 
 // Return a boolean value indicating if the value passed to contains is represented in the graph.
 Graph.prototype.contains = function(node) {
-  console.log('node is: ', node);
+  //console.log('node is: ', node);
   var result = false;
   for (key in this.list) {
-    console.log(key, typeof key);
+    //console.log(key, typeof key);
     if (key === JSON.stringify(node)) {
       result = true;
     }
@@ -81,7 +82,14 @@ Graph.prototype.forEachNode = function(cb) {
 };
 
 /*
- * Complexity: What is the time complexity of the above functions?
+ * Complexity: The time complexity associated with each function is the following:
+ *  - AddNode: O(1)
+ *  - Contains: O(n)
+ *  - removeNode: Either O(n2) or close O(n*m), depending on the connections (m) associated with each node n. 
+ *  - hasEdge: O(n)
+ *  - addEdge: O(1)
+ *  - removeEdge: O(n)
+ *  - forEachNode: O(n)*O(cb), depending on the complexity of callback
  */
-//small change to test2
+
 

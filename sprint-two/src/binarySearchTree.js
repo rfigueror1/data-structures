@@ -19,7 +19,7 @@ binarytTreeMethods.insert = function(value) {
     }else{
       // do the recursive call
       this.right.insert(value);
-      
+       
     }
   } else { // means it's less than
     if (this.left === null) {

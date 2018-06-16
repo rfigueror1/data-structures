@@ -14,20 +14,20 @@ setPrototype.add = function(item) {
   var getIndex = getIndexBelowMaxForKey(item, globalHashLimit);
   this._storage[getIndex] = item;
   
-  //if (!(_.contains(this._storage, item))) {// code for set before refactoring
-    //this._storage.push(item);
-  //}
+
 };
 
 setPrototype.contains = function(item) {
   //return _.contains(this._storage, item);//code for set before refactoring
   var getIndex = getIndexBelowMaxForKey(item, globalHashLimit);
-  if(this._storage.hasOwnProperty(getIndex))
+  if (this._storage.hasOwnProperty(getIndex)) {
     return true;
-  else
+  }
+  else {
     return false;   
+  }
 };
-
+ 
 setPrototype.remove = function(item) {
   //this._storage.splice(this._storage[_.indexOf(item)]);//code for set before refactoring
   var getIndex = getIndexBelowMaxForKey(item, globalHashLimit);
@@ -39,3 +39,4 @@ setPrototype.remove = function(item) {
  * Complexity: 
  * All functions are O(1)
  */
+ 

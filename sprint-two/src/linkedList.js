@@ -38,8 +38,7 @@ var LinkedList = function() {
     var result = false;
     if (list.head === null) {
       return false;
-    }
-    else {
+    } else {
       while (tempNode !== null || result !== false) {
         if (tempNode.value === target) {
           return true;

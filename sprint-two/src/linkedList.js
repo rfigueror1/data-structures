@@ -21,7 +21,7 @@ var LinkedList = function() {
     }
     list.tail = tempNode;    
   };
-
+ 
   list.removeHead = function() {
     // remove the head node and return it
     // get the node that the head node points to: call it targetNode

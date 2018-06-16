@@ -22,8 +22,7 @@ setPrototype.contains = function(item) {
   var getIndex = getIndexBelowMaxForKey(item, globalHashLimit);
   if (this._storage.hasOwnProperty(getIndex)) {
     return true;
-  }
-  else {
+  } else {
     return false;   
   }
 };

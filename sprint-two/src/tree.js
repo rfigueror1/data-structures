@@ -25,7 +25,7 @@ treeMethods.contains = function(target) {
   // Return true as soon as we find it
   // Return false if we don't find it.
   var result = [];
-  if(this.value === target) {
+  if (this.value === target) {
     return true;
   }
   var helperfunction = function(tree) { 

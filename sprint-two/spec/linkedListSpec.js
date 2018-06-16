@@ -3,7 +3,7 @@ describe('linkedList', function() {
 
   beforeEach(function() {
     linkedList = LinkedList();
-  });
+  }); 
 
   it('should have a head and tail', function() {
     expect(linkedList).to.have.property('head');
@@ -30,7 +30,7 @@ describe('linkedList', function() {
     linkedList.removeHead();
     expect(linkedList.head.value).to.equal(5);
   });
-
+ 
   it('should return the value of the former head when removeHead is called', function() {
     linkedList.addToTail(4);
     expect(linkedList.removeHead()).to.equal(4);

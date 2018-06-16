@@ -37,4 +37,17 @@ describe('binarySearchTree', function() {
     binarySearchTree.depthFirstLog(func);
     expect(array).to.eql([5, 2, 3, 7]);
   });
+  
+  it('should not modify structure if duplicates are inserted', function() {
+    binarySearchTree.insert(2);
+    binarySearchTree.insert(3);
+    binarySearchTree.insert(7);
+    var sameStructure = true
+    var structure = binarySearchTree;
+    binarySearchTree.insert(7);
+    var structure1 = binarySearchTree;
+    expect(structure).to.eql(structure1);
+    //console.log(binarySearchTree);
+  });
+  
 });

@@ -6,7 +6,7 @@ describe('hashTable', function() {
   beforeEach(function() {
     hashTable = new HashTable();
   });
-
+ 
   it('should have methods named "insert", "remove", and "retrieve', function() {
     expect(hashTable.insert).to.be.a('function');
     expect(hashTable.remove).to.be.a('function');
@@ -33,6 +33,31 @@ describe('hashTable', function() {
     hashTable.insert('Steven', 'Tyler');
     hashTable.remove('Steven');
     expect(hashTable.retrieve('Steven')).to.equal(undefined);
+  });
+    
+    //test function written by Burke and Ricardo 
+    it('should distribute input evenly', function() {
+      hashTable._limit=100;
+      for(var i = 0; i<75; i++){
+        hashTable.insert(i.toString());
+      }
+      
+      var temp1 = [];
+      for (var j = 0; j < 75; j++) {
+        let index = getIndexBelowMaxForKey(j.toString(), 100);
+        temp1.push(hashTable._storage.get(index).length);
+      }
+      
+      console.log(temp1);
+      
+      var maxBucketLength = Math.max(...temp1);
+      var minBucketLength = Math.min(...temp1);
+      
+      expect(maxBucketLength - minBucketLength).to.satisfy(function(num) {
+        return num < 5; 
+      });
+      
+      expect(hashTable.retrieve('Steven')).to.equal(undefined); 
   });
 
   it('should handle hash function collisions', function() {

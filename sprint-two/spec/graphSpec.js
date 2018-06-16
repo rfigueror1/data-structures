@@ -4,7 +4,7 @@ describe('graph', function() {
   beforeEach(function() {
     graph = new Graph();
   });
-
+ 
   it('should have methods named "addNode", "contains", "removeNode", "addEdge", "hasEdge", "removeEdge" and "forEachNode"', function() {
     expect(graph.addNode).to.be.a('function');
     expect(graph.contains).to.be.a('function');
@@ -69,6 +69,7 @@ describe('graph', function() {
     expect(graph.hasEdge(5, 5)).to.equal(true);
   });
   
+  // Our test:
    it('should determine whether two nodes are connected', function() {
     graph.addNode(1);
     graph.addNode(2);

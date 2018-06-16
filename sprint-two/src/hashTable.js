@@ -29,7 +29,7 @@ HashTable.prototype.insert = function(k, v) {
     
   // }
 };
-
+ 
 HashTable.prototype.retrieve = function(k) {
   var index = getIndexBelowMaxForKey(k, this._limit);
   var val = this._storage.get(index);

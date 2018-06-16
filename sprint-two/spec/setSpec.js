@@ -24,7 +24,7 @@ describe('set', function() {
     expect(set.contains('Mel Gibson')).to.equal(false);
   });
    
-   it('should not have duplicates', function() {
+  it('should not have duplicates', function() {
     set.add('Mel Gibson');
     set.add('Mel Gibson');
     var len = Object.keys(set._storage).length;

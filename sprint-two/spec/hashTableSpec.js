@@ -22,7 +22,7 @@ describe('hashTable', function() {
     hashTable.insert('Steven', 'Spielberg');
     expect(hashTable.retrieve('Steven')).not.to.equal('Seagal');
   });
-
+ 
   it('should overwrite values that have the same key', function() {
     hashTable.insert('Bob', 'Loblaw');
     hashTable.insert('Bob', 'Barker');

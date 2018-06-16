@@ -70,10 +70,10 @@ describe('graph', function() {
   });
   
   // Our test:
-   it('should determine whether two nodes are connected', function() {
+  it('should determine whether two nodes are connected', function() {
     graph.addNode(1);
     graph.addNode(2);
     graph.addEdge(1, 2);
     expect(graph.hasEdge(1, 2)).to.equal(true);
-  })
+  });
 });

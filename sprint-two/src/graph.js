@@ -24,7 +24,7 @@ Graph.prototype.contains = function(node) {
   }
   return result;
 };
-
+ 
 // Removes a node from the graph.
 Graph.prototype.removeNode = function(node) {
   delete this.list[node];

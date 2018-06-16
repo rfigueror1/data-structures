@@ -42,7 +42,7 @@ describe('binarySearchTree', function() {
     binarySearchTree.insert(2);
     binarySearchTree.insert(3);
     binarySearchTree.insert(7);
-    var sameStructure = true
+    var sameStructure = true;
     var structure = binarySearchTree;
     binarySearchTree.insert(7);
     var structure1 = binarySearchTree;

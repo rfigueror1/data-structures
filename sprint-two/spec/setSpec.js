@@ -4,7 +4,7 @@ describe('set', function() {
   beforeEach(function() {
     set = Set();
   });
-
+ 
   it('should have methods named "add", "contains", and "remove"', function() {
     expect(set.add).to.be.a('function');
     expect(set.contains).to.be.a('function');
@@ -22,6 +22,13 @@ describe('set', function() {
     set.add('Mel Gibson');
     set.remove('Mel Gibson');
     expect(set.contains('Mel Gibson')).to.equal(false);
+  });
+  
+   it('should not have duplicates', function() {
+    set.add('Mel Gibson');
+    set.add('Mel Gibson');
+    var len = Object.keys(set._storage).length;
+    expect(len).to.equal(1);
   });
 
 });
